@@ -8,10 +8,12 @@ import AIAssistant from './components/AIAssistant';
 import Home from './pages/Home.jsx';  // This is your landing page
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
-// ✅ FIXED: Changed this import from 'Products.js' to 'Home.js'
-import Products from './pages/Home.js'; 
+import Products from './pages/Home.js'; // This is your products page
 import Cart from './pages/Cart.jsx';
 import Checkout from './pages/Checkout.js';
+
+// 🛑 REMOVED: import SearchResultsPage from './pages/SearchResultsPage'; 
+
 import './App.css';
 
 function App() {
@@ -37,6 +39,9 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          
+          {/* 🛑 REMOVED: <Route path="/search" element={<SearchResultsPage />} /> */}
+
         </Routes>
         <AIAssistant />
       </Router>
@@ -45,5 +50,4 @@ function App() {
 }
 
 export default App;
-
 
